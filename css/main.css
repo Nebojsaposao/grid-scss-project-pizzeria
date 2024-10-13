@@ -110,10 +110,10 @@ a {
 }
 
 .nav {
-	background-color: #000;
+	background: linear-gradient(to bottom right, #000, #d96f45);
 	display: grid;
 	height: 100vh;
-	opacity: 0.9;
+	opacity: 0.8;
 	place-items: center center;
 	position: fixed;
 	top: 0;
@@ -135,7 +135,8 @@ a {
 
 .nav__links__li__link {
 	color: #fff;
-	letter-spacing: 0.05rem;
+	font-weight: 700;
+	letter-spacing: 0.3rem;
 	text-decoration: none;
 }
 
@@ -335,8 +336,9 @@ a {
 	gap: 2rem;
 	grid-template:
 		20rem 1fr 10rem / repeat 4,
-		1fr;
+		minmax(0, 25vw);
 	grid-template-areas: "tittle tittle tittle tittle" "left left right right" " . . . .";
+	height: 100vh;
 	justify-content: space-around;
 }
 
