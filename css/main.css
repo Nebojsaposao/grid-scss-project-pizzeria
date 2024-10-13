@@ -338,7 +338,6 @@ a {
 		20rem 1fr 10rem / repeat 4,
 		minmax(0, 25vw);
 	grid-template-areas: "tittle tittle tittle tittle" "left left right right" " . . . .";
-	height: 100vh;
 	justify-content: space-around;
 }
 
