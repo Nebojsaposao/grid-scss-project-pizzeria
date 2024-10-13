@@ -35,44 +35,42 @@
 		}
 	}
 
-	.about {
-		&__content-left {
-			color: $par-color;
-			font-size: 2.6rem;
-			grid-area: content-left;
-			line-height: 3.9rem;
-		}
+	&__content-left {
+		color: $par-color;
+		font-size: 2.6rem;
+		grid-area: content-left;
+		line-height: 3.9rem;
+	}
 
-		&__content-right {
-			color: $p-color;
-			font-family: "Playfair Display", serif;
-			font-weight: 700;
-			grid-area: content-right;
-		}
+	&__content-right {
+		color: $p-color;
+		font-family: "Playfair Display", serif;
+		font-weight: 700;
+		grid-area: content-right;
+	}
 
-		&__figures {
-			display: grid;
-			grid-area: figures;
-			grid-template-columns: repeat(3, 20rem);
-			justify-content: space-evenly;
-			text-align: center;
-		}
+	&__figures {
+		display: grid;
+		grid-area: figures;
+		grid-template-columns: repeat(3, 20rem);
+		justify-content: space-evenly;
+		text-align: center;
+	}
 
-		&__figure--number {
-			color: $par-color;
-			font-size: 5rem;
-			font-weight: 500;
-			line-height: 3.6rem;
-		}
+	&__figure--number {
+		color: $par-color;
+		font-size: 5rem;
+		font-weight: 500;
+		line-height: 3.6rem;
+	}
 
-		&__figure--text {
-			color: $p-color;
-			font-family: "Playfair Display", serif;
-			font-size: 1.5rem;
-			font-weight: 700;
-			letter-spacing: 0.2rem;
-			margin-top: 2rem;
-			text-transform: uppercase;
-		}
+	&__figure--text {
+		color: $p-color;
+		font-family: "Playfair Display", serif;
+		font-size: 1.5rem;
+		font-weight: 700;
+		letter-spacing: 0.2rem;
+		margin-top: 2rem;
+		text-transform: uppercase;
 	}
 }

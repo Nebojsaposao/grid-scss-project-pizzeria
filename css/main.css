@@ -290,21 +290,21 @@ a {
 	text-transform: capitalize;
 }
 
-.about .about__content-left {
+.about__content-left {
 	color: #8a8a8a;
 	font-size: 2.6rem;
 	grid-area: content-left;
 	line-height: 3.9rem;
 }
 
-.about .about__content-right {
+.about__content-right {
 	color: #232323;
 	font-family: "Playfair Display", serif;
 	font-weight: 700;
 	grid-area: content-right;
 }
 
-.about .about__figures {
+.about__figures {
 	display: grid;
 	grid-area: figures;
 	grid-template-columns: repeat(3, 20rem);
@@ -312,14 +312,14 @@ a {
 	text-align: center;
 }
 
-.about .about__figure--number {
+.about__figure--number {
 	color: #8a8a8a;
 	font-size: 5rem;
 	font-weight: 500;
 	line-height: 3.6rem;
 }
 
-.about .about__figure--text {
+.about__figure--text {
 	color: #232323;
 	font-family: "Playfair Display", serif;
 	font-size: 1.5rem;
@@ -327,4 +327,88 @@ a {
 	letter-spacing: 0.2rem;
 	margin-top: 2rem;
 	text-transform: uppercase;
+}
+
+/** @format */
+.menu {
+	display: grid;
+	gap: 2rem;
+	grid-template:
+		20rem 1fr 10rem / repeat 4,
+		1fr;
+	grid-template-areas: "tittle tittle tittle tittle" "left left right right" " . . . .";
+	justify-content: space-around;
+}
+
+.menu-heading {
+	align-self: center;
+	color: #232323;
+	font-size: 6rem;
+	font-weight: 300;
+	grid-area: tittle;
+	margin: 2rem 0;
+	text-transform: uppercase;
+}
+
+.menu-heading__back,
+.menu-heading__front {
+	display: block;
+	text-align: center;
+}
+
+.menu-heading__back {
+	font-family: "Playfair Display", serif;
+	font-weight: bold;
+	line-height: 4rem;
+	opacity: 0.2;
+	text-transform: capitalize;
+}
+
+.menu__left {
+	grid-area: left;
+}
+
+.menu__right {
+	grid-area: right;
+}
+
+.menu__item {
+	display: grid;
+	grid-template-columns: 10rem 1fr min-content;
+	grid-template-rows: auto;
+}
+
+.menu__item:not(:last-of-type) {
+	margin-bottom: 2rem;
+}
+
+.menu__item-content--container {
+	align-self: center;
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.menu__item-tittle {
+	font-size: 1.5rem;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.menu__item-desc {
+	font-size: 1.2rem;
+}
+
+.menu__item-line {
+	align-self: center;
+	border-bottom: 2px dotted #cfcece;
+	width: 100%;
+}
+
+.menu__item-price {
+	align-self: center;
+	color: #000;
+	font-style: 1.8rem;
 }
