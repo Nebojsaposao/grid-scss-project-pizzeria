@@ -1,0 +1,28 @@
+{
+	"name": "projectcssgridpizzeria",
+	"version": "1.0.0",
+	"main": "index..js",
+	"scripts": {
+		"sass": "sass --watch sass/main.scss css/main.css",
+		"lint": "npx stylelint css/main.css sass/**/*.scss sass/components/**/*.scss sass/partials/**/*.scss",
+		"lint:fix": "npx stylelint --fix css/main.css sass/components/**/*.scss sass/partials/**/*.scss",
+		"format": "prettier --write sass/components/**/*.scss  sass/partials/**/*.scss sass/main.scss css/main.css",
+		"watch": "nodemon -w sass/**/*.scss -w css/main.css --exec \"npm run format && npm run lint:fix && npm run sass\"",
+		"start": "npm-run-all -p sass watch"
+	},
+	"devDependencies": {
+		"concurrently": "^7.0.0",
+		"nodemon": "^3.1.7",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
+		"prettier": "^3.3.3",
+		"sass": "^1.79.4",
+		"stylelint": "^16.10.0",
+		"stylelint-config-recommended-scss": "^14.1.0",
+		"stylelint-config-standard": "^36.0.1",
+		"stylelint-config-standard-scss": "^13.1.0",
+		"stylelint-order": "^6.0.4",
+		"stylelint-prettier": "^5.0.2",
+		"stylelint-scss": "^6.7.0"
+	}
+}

@@ -1,0 +1,127 @@
+/**
+ * Navigacija
+ *
+ * @format
+ */
+
+#navToggle {
+	height: 5rem;
+	opacity: 0;
+	width: 5rem;
+}
+
+.nav-toggle__icon {
+	cursor: pointer;
+	padding: 2rem;
+	position: absolute;
+	right: 0;
+	top: 1rem;
+	z-index: 2;
+
+	&-span {
+		background-color: $heading-color;
+		border-radius: 5px;
+		display: block;
+		height: 0.35rem;
+		position: relative;
+		transition: all 0.3s ease;
+		width: 3.5rem;
+
+		&::before,
+		&::after {
+			background-color: $heading-color;
+			border-radius: 5px;
+			content: "";
+			height: 0.35rem;
+			position: absolute;
+			transition: all 0.3s ease;
+			width: 3.5rem;
+		}
+
+		&::before {
+			top: 1.2rem;
+		}
+
+		&::after {
+			bottom: 1.2rem;
+		}
+	}
+}
+
+.nav {
+	background-color: $nav-bg-color;
+	display: grid;
+	height: 100vh;
+	opacity: 0.9;
+	place-items: center center;
+	position: fixed;
+	top: 0;
+	transform: translateX(400%);
+	transition: 0.5s linear;
+	width: 30vw;
+	z-index: 1;
+
+	&__links {
+		position: relative;
+		text-transform: uppercase;
+
+		&__li {
+			display: block;
+			padding: 1rem;
+
+			&__link {
+				color: $heading-color;
+				letter-spacing: 0.05rem;
+				text-decoration: none;
+
+				&::after {
+					background-color: $heading-color;
+					bottom: -5px;
+					content: "";
+					height: 2px;
+					left: 0;
+					position: absolute;
+					transform: translateX(-100%) scale(0);
+					transition: 0.5s linear;
+					width: 100%;
+				}
+
+				&:hover {
+					color: $nav-link-hover-color;
+					text-decoration: underline;
+					text-decoration-color: $nav-link-hover-color;
+
+					&::after {
+						transform: translateX(7%) scale(1);
+					}
+				}
+			}
+		}
+	}
+}
+
+#navToggle:checked {
+	~ .nav {
+		transform: translateX(0);
+	}
+
+	~ .nav-toggle__icon {
+		position: fixed;
+	}
+
+	~ .nav-toggle__icon .nav-toggle__icon-span {
+		background-color: transparent;
+	}
+
+	~ .nav-toggle__icon .nav-toggle__icon-span::before {
+		top: 0;
+		transform: rotate(45deg);
+		transition: 0.2s ease-in-out;
+	}
+
+	~ .nav-toggle__icon .nav-toggle__icon-span::after {
+		bottom: 0;
+		transform: rotate(-45deg);
+		transition: 0.2s ease-in-out;
+	}
+}

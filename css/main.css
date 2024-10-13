@@ -1,0 +1,330 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/** @format */
+
+/** @format */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	color: #232323;
+	font-family: Oswald, sans-serif;
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	overflow-x: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+p {
+	color: #8a8a8a;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/** @format */
+.header {
+	display: grid;
+	grid-template-columns: 7.5rem max-content;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.header__brand {
+	display: block;
+	z-index: 999;
+}
+
+.header__brand__img {
+	display: block;
+	padding: 1rem;
+}
+
+/**
+ * Navigacija
+ *
+ * @format
+ */
+#navToggle {
+	height: 5rem;
+	opacity: 0;
+	width: 5rem;
+}
+
+.nav-toggle__icon {
+	cursor: pointer;
+	padding: 2rem;
+	position: absolute;
+	right: 0;
+	top: 1rem;
+	z-index: 2;
+}
+
+.nav-toggle__icon-span {
+	background-color: #fff;
+	border-radius: 5px;
+	display: block;
+	height: 0.35rem;
+	position: relative;
+	transition: all 0.3s ease;
+	width: 3.5rem;
+}
+
+.nav-toggle__icon-span::before,
+.nav-toggle__icon-span::after {
+	background-color: #fff;
+	border-radius: 5px;
+	content: "";
+	height: 0.35rem;
+	position: absolute;
+	transition: all 0.3s ease;
+	width: 3.5rem;
+}
+
+.nav-toggle__icon-span::before {
+	top: 1.2rem;
+}
+
+.nav-toggle__icon-span::after {
+	bottom: 1.2rem;
+}
+
+.nav {
+	background-color: #000;
+	display: grid;
+	height: 100vh;
+	opacity: 0.9;
+	place-items: center center;
+	position: fixed;
+	top: 0;
+	transform: translateX(400%);
+	transition: 0.5s linear;
+	width: 30vw;
+	z-index: 1;
+}
+
+.nav__links {
+	position: relative;
+	text-transform: uppercase;
+}
+
+.nav__links__li {
+	display: block;
+	padding: 1rem;
+}
+
+.nav__links__li__link {
+	color: #fff;
+	letter-spacing: 0.05rem;
+	text-decoration: none;
+}
+
+.nav__links__li__link::after {
+	background-color: #fff;
+	bottom: -5px;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	transform: translateX(-100%) scale(0);
+	transition: 0.5s linear;
+	width: 100%;
+}
+
+.nav__links__li__link:hover {
+	color: #ccc;
+	text-decoration: underline;
+	text-decoration-color: #ccc;
+}
+
+.nav__links__li__link:hover::after {
+	transform: translateX(7%) scale(1);
+}
+
+#navToggle:checked ~ .nav {
+	transform: translateX(0);
+}
+
+#navToggle:checked ~ .nav-toggle__icon {
+	position: fixed;
+}
+
+#navToggle:checked ~ .nav-toggle__icon .nav-toggle__icon-span {
+	background-color: transparent;
+}
+
+#navToggle:checked ~ .nav-toggle__icon .nav-toggle__icon-span::before {
+	top: 0;
+	transform: rotate(45deg);
+	transition: 0.2s ease-in-out;
+}
+
+#navToggle:checked ~ .nav-toggle__icon .nav-toggle__icon-span::after {
+	bottom: 0;
+	transform: rotate(-45deg);
+	transition: 0.2s ease-in-out;
+}
+
+/** @format */
+.banner {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-rows: repeat(3, 1fr);
+	height: 100vh;
+}
+
+.banner__bg-container {
+	grid-column: 1/4;
+	grid-row: 1/4;
+}
+
+.banner__bg-container img {
+	height: 100vh;
+	object-fit: cover;
+}
+
+.banner__content {
+	grid-column: 1/4;
+	grid-row: 2/3;
+	justify-self: center;
+	text-align: center;
+}
+
+.banner__content--h1 {
+	color: #fff;
+	font-family: "Playfair Display", serif;
+	font-size: 4rem;
+	font-style: italic;
+}
+
+.banner__content--h2 {
+	color: #fff;
+	font-size: 10rem;
+	font-weight: 600;
+	line-height: 10.8rem;
+	text-transform: uppercase;
+}
+
+.banner__content .btn {
+	background: linear-gradient(to bottom right, #000, #d96f45);
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	font-family: "Playfair Display", serif;
+	font-size: 1.6rem;
+	font-weight: 700;
+	letter-spacing: 0.4rem;
+	margin: 1.5rem 3rem;
+	opacity: 0.8;
+	padding: 1rem 4.5rem;
+	text-decoration: none;
+}
+
+.banner__content .btn:hover {
+	background: linear-gradient(to bottom right, #f86d6d, #f88e6d);
+	box-shadow: 0 12px 24px rgb(0 0 0 / 50%);
+}
+
+.banner__content .btn:focus {
+	background: #ad3636;
+	box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
+}
+
+.banner__content .btn:active {
+	background: #000;
+	box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
+}
+
+/** @format */
+.about {
+	background: url("../images/img/subsection-2.jpg") bottom no-repeat;
+	background-color: #ddd;
+	background-size: cover;
+	display: grid;
+	gap: 2rem;
+	grid-template: 20rem 1fr 20rem/25rem repeat(2, 1fr) 25rem;
+	grid-template-areas: ". tittle tittle ." ". content-left content-right ." "figures figures figures figures";
+	width: 100%;
+}
+
+.about-heading {
+	color: #232323;
+	font-size: 6rem;
+	font-weight: 300;
+	grid-area: tittle;
+	place-self: center;
+	text-transform: uppercase;
+}
+
+.about-heading__back,
+.about-heading__front {
+	display: block;
+	text-align: center;
+}
+
+.about-heading__back {
+	font-family: "Playfair Display", serif;
+	font-weight: bold;
+	line-height: 4rem;
+	opacity: 0.2;
+	text-transform: capitalize;
+}
+
+.about .about__content-left {
+	color: #8a8a8a;
+	font-size: 2.6rem;
+	grid-area: content-left;
+	line-height: 3.9rem;
+}
+
+.about .about__content-right {
+	color: #232323;
+	font-family: "Playfair Display", serif;
+	font-weight: 700;
+	grid-area: content-right;
+}
+
+.about .about__figures {
+	display: grid;
+	grid-area: figures;
+	grid-template-columns: repeat(3, 20rem);
+	justify-content: space-evenly;
+	text-align: center;
+}
+
+.about .about__figure--number {
+	color: #8a8a8a;
+	font-size: 5rem;
+	font-weight: 500;
+	line-height: 3.6rem;
+}
+
+.about .about__figure--text {
+	color: #232323;
+	font-family: "Playfair Display", serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.2rem;
+	margin-top: 2rem;
+	text-transform: uppercase;
+}

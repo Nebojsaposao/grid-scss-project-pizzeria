@@ -1,0 +1,21 @@
+/** @format */
+
+.header {
+	// background-image: linear-gradient(to bottom right, $header-bg-color, $heading-color);
+	display: grid;
+	grid-template-columns: 7.5rem max-content;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	&__brand {
+		display: block;
+		z-index: 999;
+
+		&__img {
+			display: block;
+			padding: 1rem;
+		}
+	}
+}

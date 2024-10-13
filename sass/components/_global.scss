@@ -1,0 +1,38 @@
+/** @format */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	// DIFOLTNA VRIJEDNOST FONT-SIZE-A BRAUZERA JE 16 PX TAKO DA JE 62.5% USTVARI 10PX(TO RADIMO DA NAM JE KASNIJE LAKSE KORISTITI REMOVE JER SA OVIM POSTAVLJAMO  SADA DA JE DIFOLTNA VELICINA FONTA 10PX)
+	font-size: 62.5%;
+}
+
+body {
+	color: $p-color;
+	font-family: Oswald, sans-serif;
+	// ZELIMO DA FONT SIZE BUDE 14PX IZRAZENI U REM-OVIMA,VRIJEDNOST REMOVA DOBIJAMO TAKO STO TIH 14PX PODIJELIMO SA 10PX KOJE SMO NAPRAVILI KAO DIFOLT U ROOT ODNOSNO HTML TAGU
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	overflow-x: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+p {
+	color: $par-color;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}

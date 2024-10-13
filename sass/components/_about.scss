@@ -1,0 +1,78 @@
+/** @format */
+.about {
+	background: url("../images/img/subsection-2.jpg") bottom no-repeat;
+	background-color: $about-bgc;
+	background-size: cover;
+	display: grid;
+	gap: 2rem;
+	grid-template: 20rem 1fr 20rem / 25rem repeat(2, 1fr) 25rem;
+	grid-template-areas:
+		". tittle tittle ."
+		". content-left content-right ."
+		"figures figures figures figures";
+	width: 100%;
+
+	&-heading {
+		color: $p-color;
+		font-size: 6rem;
+		font-weight: 300;
+		grid-area: tittle;
+		place-self: center;
+		text-transform: uppercase;
+
+		&__back,
+		&__front {
+			display: block;
+			text-align: center;
+		}
+
+		&__back {
+			font-family: "Playfair Display", serif;
+			font-weight: bold;
+			line-height: 4rem;
+			opacity: 0.2;
+			text-transform: capitalize;
+		}
+	}
+
+	.about {
+		&__content-left {
+			color: $par-color;
+			font-size: 2.6rem;
+			grid-area: content-left;
+			line-height: 3.9rem;
+		}
+
+		&__content-right {
+			color: $p-color;
+			font-family: "Playfair Display", serif;
+			font-weight: 700;
+			grid-area: content-right;
+		}
+
+		&__figures {
+			display: grid;
+			grid-area: figures;
+			grid-template-columns: repeat(3, 20rem);
+			justify-content: space-evenly;
+			text-align: center;
+		}
+
+		&__figure--number {
+			color: $par-color;
+			font-size: 5rem;
+			font-weight: 500;
+			line-height: 3.6rem;
+		}
+
+		&__figure--text {
+			color: $p-color;
+			font-family: "Playfair Display", serif;
+			font-size: 1.5rem;
+			font-weight: 700;
+			letter-spacing: 0.2rem;
+			margin-top: 2rem;
+			text-transform: uppercase;
+		}
+	}
+}
