@@ -1,10 +1,11 @@
 /** @format */
+
+/** @format */
+
+/** @format */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-/** @format */
-
-/** @format */
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -21,6 +22,36 @@ body {
 	font-size: 1.4rem;
 	line-height: 2.4rem;
 	overflow-x: hidden;
+}
+
+.btn {
+	background: linear-gradient(to bottom right, #000, #d96f45);
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	font-family: "Playfair Display", serif;
+	font-size: 1.6rem;
+	font-weight: 700;
+	letter-spacing: 0.4rem;
+	margin: 1.5rem 3rem;
+	opacity: 0.8;
+	padding: 1rem 4.5rem;
+	text-decoration: none;
+}
+
+.btn:hover {
+	background: linear-gradient(to bottom right, #f86d6d, #f88e6d);
+	box-shadow: 0 12px 24px rgb(0 0 0 / 50%);
+}
+
+.btn:focus {
+	background: #ad3636;
+	box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
+}
+
+.btn:active {
+	background: #000;
+	box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
 }
 
 img {
@@ -226,36 +257,6 @@ a {
 	text-transform: uppercase;
 }
 
-.banner__content .btn {
-	background: linear-gradient(to bottom right, #000, #d96f45);
-	border-radius: 10px;
-	color: #fff;
-	display: inline-block;
-	font-family: "Playfair Display", serif;
-	font-size: 1.6rem;
-	font-weight: 700;
-	letter-spacing: 0.4rem;
-	margin: 1.5rem 3rem;
-	opacity: 0.8;
-	padding: 1rem 4.5rem;
-	text-decoration: none;
-}
-
-.banner__content .btn:hover {
-	background: linear-gradient(to bottom right, #f86d6d, #f88e6d);
-	box-shadow: 0 12px 24px rgb(0 0 0 / 50%);
-}
-
-.banner__content .btn:focus {
-	background: #ad3636;
-	box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
-}
-
-.banner__content .btn:active {
-	background: #000;
-	box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
-}
-
 /** @format */
 .about {
 	background: url("../images/img/subsection-2.jpg") bottom no-repeat;
@@ -335,10 +336,9 @@ a {
 	display: grid;
 	gap: 2rem;
 	grid-template:
-		20rem 1fr 10rem / repeat 4,
-		minmax(0, 25vw);
-	grid-template-areas: "tittle tittle tittle tittle" "left left right right" " . . . .";
-	justify-content: space-around;
+		20rem 1fr 10rem / repeat 2,
+		minmax(0, 40vw);
+	grid-template-areas: "tittle tittle" "left right" " . .";
 }
 
 .menu-heading {
@@ -363,6 +363,11 @@ a {
 	line-height: 4rem;
 	opacity: 0.2;
 	text-transform: capitalize;
+}
+
+.menu__left,
+.menu__right {
+	margin: 3rem 5rem;
 }
 
 .menu__left {
@@ -412,4 +417,31 @@ a {
 	align-self: center;
 	color: #000;
 	font-style: 1.8rem;
+}
+
+/** @format */
+.subsection {
+	align-items: center;
+	display: grid;
+	grid-template-rows: 30rem;
+	justify-content: center;
+	text-align: center;
+}
+
+.subsection-reserve {
+	background: url("../images/img/subsection-1.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.subsection h2 {
+	font-size: 4rem;
+	text-transform: uppercase;
+}
+
+.subsection__sub-heading {
+	font-family: "Playfair Display", serif;
+	font-size: 2.6rem;
+	font-style: italic;
+	margin-top: 0.5rem;
+	text-transform: capitalize;
 }

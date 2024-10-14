@@ -35,39 +35,5 @@
 			line-height: 10.8rem;
 			text-transform: uppercase;
 		}
-
-		& .btn {
-			background: linear-gradient(
-				to bottom right,
-				$nav-bg-color,
-				$btn-bg-color
-			);
-			border-radius: 10px;
-			color: $heading-color;
-			display: inline-block;
-			font-family: "Playfair Display", serif;
-			font-size: 1.6rem;
-			font-weight: 700;
-			letter-spacing: 0.4rem;
-			margin: 1.5rem 3rem;
-			opacity: 0.8;
-			padding: 1rem 4.5rem;
-			text-decoration: none;
-
-			&:hover {
-				background: linear-gradient(to bottom right, $btn-hover1, $btn-hover2);
-				box-shadow: 0 12px 24px $btn-box-shadow;
-			}
-
-			&:focus {
-				background: $btn-focus;
-				box-shadow: 0 6px 12px $btn-box-shadow;
-			}
-
-			&:active {
-				background: $nav-bg-color;
-				box-shadow: 0 6px 12px $btn-box-shadow;
-			}
-		}
 	}
 }

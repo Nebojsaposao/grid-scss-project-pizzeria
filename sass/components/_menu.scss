@@ -2,12 +2,11 @@
 .menu {
 	display: grid;
 	gap: 2rem;
-	grid-template: 20rem 1fr 10rem / repeat (4, minmax(0, 25vw));
+	grid-template: 20rem 1fr 10rem / repeat (2, minmax(0, 40vw));
 	grid-template-areas:
-		"tittle tittle tittle tittle"
-		"left left right right"
-		" . . . .";
-	justify-content: space-around;
+		"tittle tittle"
+		"left right"
+		" . .";
 
 	&-heading {
 		align-self: center;
@@ -31,6 +30,11 @@
 			opacity: 0.2;
 			text-transform: capitalize;
 		}
+	}
+
+	&__left,
+	&__right {
+		margin: 3rem 5rem;
 	}
 
 	&__left {
