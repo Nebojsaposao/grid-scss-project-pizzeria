@@ -1,0 +1,71 @@
+/** @format */
+
+.delivery {
+	display: grid;
+	gap: 2rem;
+	grid-template: "tittle" 10rem "image" 1fr "." 10rem / auto;
+
+	&-heading {
+		align-self: center;
+		color: $p-color;
+		font-size: 6rem;
+		font-weight: 300;
+		grid-area: tittle;
+		margin: 2rem 0;
+		text-transform: uppercase;
+
+		&__back,
+		&__front {
+			display: block;
+			text-align: center;
+		}
+
+		&__back {
+			font-family: "Playfair Display", serif;
+			font-weight: bold;
+			line-height: 4rem;
+			opacity: 0.2;
+			text-transform: capitalize;
+		}
+	}
+
+	&__image-grid {
+		display: grid;
+		gap: 1rem;
+		grid-area: image;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(6, 5vw);
+		margin: 0 1rem;
+
+		& img {
+			height: 100%;
+			object-fit: cover;
+		}
+
+		& .img1 {
+			grid-column: span 2;
+			grid-row: span 2;
+		}
+
+		& .img2 {
+			grid-column: span 2;
+			grid-row: span 3;
+		}
+
+		& .img3 {
+			grid-column: span 2;
+			grid-row: span 4;
+		}
+
+		& .img4 {
+			grid-column: span 2;
+			grid-row: span 4;
+		}
+
+		& .img7,
+		& .img8 {
+			grid-column: span 2;
+			grid-row: span 2;
+		}
+	}
+}

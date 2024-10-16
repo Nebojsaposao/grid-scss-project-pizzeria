@@ -264,7 +264,7 @@ a {
 	background-size: cover;
 	display: grid;
 	gap: 2rem;
-	grid-template: 20rem 1fr 20rem/25rem repeat(2, 1fr) 25rem;
+	grid-template: 20rem 1fr 20rem/10rem repeat(2, 1fr) 10rem;
 	grid-template-areas: ". tittle tittle ." ". content-left content-right ." "figures figures figures figures";
 	width: 100%;
 }
@@ -336,9 +336,9 @@ a {
 	display: grid;
 	gap: 2rem;
 	grid-template:
-		20rem 1fr 10rem / repeat 2,
-		minmax(0, 40vw);
-	grid-template-areas: "tittle tittle" "left right" " . .";
+		20rem 1fr 20rem/2vw repeat 2,
+		minmax(0, 40vw) 2vw;
+	grid-template-areas: " . tittle tittle . " " . left right . " " . . . . ";
 }
 
 .menu-heading {
@@ -367,7 +367,7 @@ a {
 
 .menu__left,
 .menu__right {
-	margin: 3rem 5rem;
+	margin: 5rem 0;
 }
 
 .menu__left {
@@ -423,6 +423,7 @@ a {
 .subsection {
 	align-items: center;
 	display: grid;
+	grid-template-columns: auto;
 	grid-template-rows: 30rem;
 	justify-content: center;
 	text-align: center;
@@ -444,4 +445,100 @@ a {
 	font-style: italic;
 	margin-top: 0.5rem;
 	text-transform: capitalize;
+}
+
+/** @format */
+.delivery {
+	display: grid;
+	gap: 2rem;
+	grid-template: "tittle" 10rem "image" 1fr "." 10rem / auto;
+}
+
+.delivery-heading {
+	align-self: center;
+	color: #232323;
+	font-size: 6rem;
+	font-weight: 300;
+	grid-area: tittle;
+	margin: 2rem 0;
+	text-transform: uppercase;
+}
+
+.delivery-heading__back,
+.delivery-heading__front {
+	display: block;
+	text-align: center;
+}
+
+.delivery-heading__back {
+	font-family: "Playfair Display", serif;
+	font-weight: bold;
+	line-height: 4rem;
+	opacity: 0.2;
+	text-transform: capitalize;
+}
+
+.delivery__image-grid {
+	display: grid;
+	gap: 1rem;
+	grid-area: image;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(6, 5vw);
+	margin: 0 1rem;
+}
+
+.delivery__image-grid img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.delivery__image-grid .img1 {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.delivery__image-grid .img2 {
+	grid-column: span 2;
+	grid-row: span 3;
+}
+
+.delivery__image-grid .img3 {
+	grid-column: span 2;
+	grid-row: span 4;
+}
+
+.delivery__image-grid .img4 {
+	grid-column: span 2;
+	grid-row: span 4;
+}
+
+.delivery__image-grid .img7,
+.delivery__image-grid .img8 {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+/** @format */
+.subsection-delivery {
+	background: url("../images/img/subsection-2.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.subsection-delivery h2 {
+	font-style: 2.6rem;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.subsection-delivery .delivery-partners {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(2, 5rem) 10rem 15rem;
+	grid-template-rows: auto;
+	margin: 1rem 0;
+}
+
+.subsection-delivery .delivery-partners img {
+	object-fit: cover;
+	width: 100%;
 }

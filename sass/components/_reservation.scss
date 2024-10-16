@@ -3,6 +3,7 @@
 .subsection {
 	align-items: center;
 	display: grid;
+	grid-template-columns: auto;
 	grid-template-rows: 30rem;
 	justify-content: center;
 	text-align: center;

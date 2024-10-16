@@ -5,7 +5,7 @@
 	background-size: cover;
 	display: grid;
 	gap: 2rem;
-	grid-template: 20rem 1fr 20rem / 25rem repeat(2, 1fr) 25rem;
+	grid-template: 20rem 1fr 20rem / 10rem repeat(2, 1fr) 10rem;
 	grid-template-areas:
 		". tittle tittle ."
 		". content-left content-right ."
