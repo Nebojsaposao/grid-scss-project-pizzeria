@@ -631,3 +631,67 @@ a {
 	bottom: unset;
 	top: -2rem;
 }
+
+/** @format */
+.contact {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(2, 45vw);
+	grid-template-rows: 1fr 5rem;
+	justify-content: center;
+}
+
+.contact__form {
+	border: 1px solid #dedede;
+	padding: 2rem 4rem;
+	text-align: center;
+}
+
+.contact__form h2 {
+	font-size: 2.6rem;
+	font-weight: 500;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.contact__form--group fieldset {
+	border: 0;
+}
+
+.contact__form--group fieldset legend {
+	color: #8a8a8a;
+	margin: 0 auto 3rem;
+}
+
+.contact__form--group fieldset label {
+	display: block;
+	margin-bottom: 1.5rem;
+}
+
+.contact__form--group fieldset label input,
+.contact__form--group fieldset label textarea {
+	border: 0;
+	border-bottom: 1px solid #dedede;
+	color: #8a8a8a;
+	font-family: Oswald, sans-serif;
+	font-size: 1.6rem;
+	padding: 1rem;
+	text-align: start;
+	width: 100%;
+}
+
+.contact__images {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 30rem 25rem;
+}
+
+.contact__images--image {
+	height: 100%;
+	object-fit: cover;
+}
+
+.contact__images--image:first-child {
+	grid-column: span 2;
+}
