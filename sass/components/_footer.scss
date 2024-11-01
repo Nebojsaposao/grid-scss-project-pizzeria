@@ -1,30 +1,29 @@
-.footer{
+/** @format */
 
-  &-top{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    background: url(../images/img/footer.jpg) center no-repeat;
-    background-size: cover;
-    align-items: center;
-    justify-items: center;
-    padding: 2rem;
-  }
+.footer {
+	&-top {
+		background: url("../images/img/footer.jpg") center no-repeat;
+		background-size: cover;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding: 2rem;
+		place-items: center center;
+	}
 
-  &__logo{
-    width: 7.5rem;
-  }
+	&__logo {
+		width: 7.5rem;
+	}
 
-  &__link,
-  &__social-link{
-    color: $p-color;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+	&__link,
+	&__social-link {
+		color: $p-color;
+		font-size: 1.2rem;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
 
-  &-bottom{
-    padding: 2rem;
-    text-align: center;
-  }
+	&-bottom {
+		padding: 2rem;
+		text-align: center;
+	}
 }
